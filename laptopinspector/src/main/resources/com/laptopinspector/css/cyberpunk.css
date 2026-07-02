@@ -1,0 +1,578 @@
+/* ============================================================
+   LAPTOP INSPECTOR — Modern Professional Theme
+   Light / Dark Mode Support
+   ============================================================ */
+
+/* ── Light Mode (default) ───────────────────────────────────── */
+.root {
+    -app-bg:          #F5F6FA;
+    -app-surface:     #FFFFFF;
+    -app-surface2:    #F0F1F5;
+    -app-border:      #E2E4EA;
+    -app-text:        #1A1D23;
+    -app-text2:       #6B7280;
+    -app-text3:       #9CA3AF;
+    -app-accent:      #2563EB;
+    -app-accent-bg:   #EFF6FF;
+    -app-accent-text: #1D4ED8;
+    -app-success:     #16A34A;
+    -app-success-bg:  #F0FDF4;
+    -app-danger:      #DC2626;
+    -app-danger-bg:   #FEF2F2;
+    -app-warning:     #D97706;
+    -app-warning-bg:  #FFFBEB;
+    -app-sidebar:     #FFFFFF;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────── */
+.dark-mode {
+    -app-bg:          #0F1117;
+    -app-surface:     #1A1D27;
+    -app-surface2:    #222535;
+    -app-border:      #2A2D3E;
+    -app-text:        #E8EAF0;
+    -app-text2:       #8B90A0;
+    -app-text3:       #555A6E;
+    -app-accent:      #3B82F6;
+    -app-accent-bg:   #1E3A5F;
+    -app-accent-text: #93C5FD;
+    -app-success:     #22C55E;
+    -app-success-bg:  #14532D;
+    -app-danger:      #F87171;
+    -app-danger-bg:   #450A0A;
+    -app-warning:     #F59E0B;
+    -app-warning-bg:  #451A03;
+    -app-sidebar:     #141720;
+}
+
+/* ── Root Pane ──────────────────────────────────────────────── */
+.root-pane {
+    -fx-background-color: -app-bg;
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+.sidebar {
+    -fx-background-color: -app-sidebar;
+    -fx-border-color: -app-border;
+    -fx-border-width: 0 1 0 0;
+}
+
+.logo-box {
+    -fx-padding: 20 20 16 20;
+    -fx-border-color: -app-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.logo-title {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.logo-sub {
+    -fx-text-fill: -app-text3;
+    -fx-font-size: 11px;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.nav-item:hover {
+    -fx-background-color: -app-surface2;
+    -fx-text-fill: -app-text;
+}
+
+.nav-item.active {
+    -fx-background-color: -app-accent-bg;
+    -fx-text-fill: -app-accent;
+    -fx-border-color: -app-accent;
+    -fx-font-weight: bold;
+}
+
+/* ── Page Header ────────────────────────────────────────────── */
+.page-title {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.card {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 16 20;
+}
+
+.card:hover {
+    -fx-border-color: -app-accent;
+}
+
+.card-before {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-cursor: hand;
+}
+
+.card-before:hover {
+    -fx-border-color: -app-accent;
+    -fx-background-color: -app-accent-bg;
+}
+
+.card-after {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-cursor: hand;
+}
+
+.card-after:hover {
+    -fx-border-color: -app-success;
+    -fx-background-color: -app-success-bg;
+}
+
+.card-title {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.card-desc {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 12px;
+}
+
+/* ── Badge ──────────────────────────────────────────────────── */
+.badge-blue {
+    -fx-background-color: -app-accent-bg;
+    -fx-text-fill: -app-accent-text;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8;
+    -fx-background-radius: 6;
+}
+
+.badge-green {
+    -fx-background-color: -app-success-bg;
+    -fx-text-fill: -app-success;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8;
+    -fx-background-radius: 6;
+}
+
+.badge-before {
+    -fx-background-color: -app-accent-bg;
+    -fx-text-fill: -app-accent-text;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12;
+    -fx-background-radius: 6;
+}
+
+.badge-after {
+    -fx-background-color: -app-success-bg;
+    -fx-text-fill: -app-success;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12;
+    -fx-background-radius: 6;
+}
+
+/* ── Section Header ─────────────────────────────────────────── */
+.section-title {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* ── Data Rows ──────────────────────────────────────────────── */
+.data-label {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+    -fx-padding: 9 0;
+}
+
+.data-value {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 0;
+}
+
+.data-value-accent {
+    -fx-text-fill: -app-accent;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 0;
+}
+
+.data-value-success {
+    -fx-text-fill: -app-success;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 0;
+}
+
+.data-separator {
+    -fx-background-color: -app-border;
+    -fx-pref-height: 1;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: -app-accent;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -app-accent-text;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #1E40AF;
+}
+
+.btn-primary:disabled {
+    -fx-background-color: -app-border;
+    -fx-text-fill: -app-text3;
+}
+
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+    -fx-padding: 9 20;
+    -fx-background-radius: 8;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: -app-surface2;
+    -fx-text-fill: -app-text;
+    -fx-border-color: -app-text3;
+}
+
+.btn-toggle {
+    -fx-background-color: -app-surface2;
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 12px;
+    -fx-padding: 6 14;
+    -fx-background-radius: 20;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-cursor: hand;
+}
+
+.btn-toggle:hover {
+    -fx-background-color: -app-accent-bg;
+    -fx-text-fill: -app-accent-text;
+    -fx-border-color: -app-accent;
+}
+
+/* ── Top Bar ────────────────────────────────────────────────── */
+.top-bar {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 20;
+}
+
+/* ── Header Strip ───────────────────────────────────────────── */
+.header-strip {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 14 24;
+}
+
+/* ── Footer Strip ───────────────────────────────────────────── */
+.footer-strip {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 14 24;
+}
+
+/* ── Landing Page ───────────────────────────────────────────── */
+.landing-title {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.landing-accent {
+    -fx-text-fill: -app-accent;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.landing-sub {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 14px;
+}
+
+.version-text {
+    -fx-text-fill: -app-text3;
+    -fx-font-size: 11px;
+}
+
+/* ── Text Field ─────────────────────────────────────────────── */
+.text-field {
+    -fx-background-color: -app-surface;
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: -app-text;
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+    -fx-prompt-text-fill: -app-text3;
+}
+
+.text-field:focused {
+    -fx-border-color: -app-accent;
+}
+
+/* ── Input Label ────────────────────────────────────────────── */
+.input-label {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* ── Error Label ────────────────────────────────────────────── */
+.error-label {
+    -fx-text-fill: -app-danger;
+    -fx-font-size: 12px;
+}
+
+/* ── Popup ──────────────────────────────────────────────────── */
+.popup-title {
+    -fx-text-fill: -app-text;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.popup-subtitle {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+}
+
+/* ── Notification ───────────────────────────────────────────── */
+.notif-icon-success {
+    -fx-text-fill: -app-success;
+    -fx-font-size: 64px;
+}
+
+.notif-icon-failed {
+    -fx-text-fill: -app-danger;
+    -fx-font-size: 64px;
+}
+
+.notif-title-success {
+    -fx-text-fill: -app-success;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.notif-title-failed {
+    -fx-text-fill: -app-danger;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.notif-message {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+}
+
+/* ── Scroll Pane ────────────────────────────────────────────── */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: -app-surface2;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: -app-border;
+    -fx-background-radius: 4;
+}
+
+/* ── Loading ────────────────────────────────────────────────── */
+.loading-overlay {
+    -fx-background-color: rgba(15, 17, 23, 0.7);
+}
+
+.loading-label {
+    -fx-text-fill: -app-text2;
+    -fx-font-size: 13px;
+}
+
+.spinner {
+    -fx-progress-color: -app-accent;
+}
+
+/* ── Progress Bar ───────────────────────────────────────────── */
+.progress-bar .track {
+    -fx-background-color: -app-surface2;
+    -fx-background-radius: 4;
+}
+
+.progress-bar .bar {
+    -fx-background-color: -app-accent;
+    -fx-background-radius: 4;
+}
+
+/* =========================================
+   HISTORY PAGE ONLY
+========================================= */
+
+.history-root {
+
+    -fx-background-color: transparent;
+}
+/* =========================================
+   HISTORY TABLE
+========================================= */
+
+.history-table {
+
+    -fx-background-color: #111827;
+
+    -fx-border-color: #334155;
+
+    -fx-border-radius: 12;
+
+    -fx-background-radius: 12;
+
+    -fx-padding: 0;
+}
+
+/* TABLE HEADER */
+
+.history-table .column-header-background {
+
+    -fx-background-color: #172554;
+
+    -fx-background-radius: 12 12 0 0;
+}
+
+.history-table .column-header {
+
+    -fx-background-color: transparent;
+
+    -fx-pref-height: 42;
+
+    -fx-border-color: transparent;
+}
+
+.history-table .column-header .label {
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+}
+
+/* ROW */
+
+.history-table .table-row-cell {
+
+    -fx-background-color: #1e293b;
+
+    -fx-cell-size: 42px;
+
+    -fx-border-color: transparent;
+}
+
+.history-table .table-row-cell:odd {
+
+    -fx-background-color: #273449;
+}
+
+.history-table .table-row-cell:selected {
+
+    -fx-background-color: #3b82f6;
+}
+
+/* CELL */
+
+.history-table .table-cell {
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 13px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-padding: 0 0 0 10;
+
+    -fx-border-color: transparent;
+}
+
+/* EMPTY AREA */
+
+.history-table .virtual-flow .corner {
+
+    -fx-background-color: transparent;
+}
+
+/* SCROLL */
+
+.history-table .scroll-bar {
+
+    -fx-background-color: #111827;
+}
+
+.history-table .thumb {
+
+    -fx-background-color: #3b82f6;
+
+    -fx-background-radius: 8;
+}

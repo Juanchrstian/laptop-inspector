@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+<title>
+    Inspection Compare
+</title>
+
+<link
+        rel="stylesheet"
+        href="css/style.css?v=22">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- ================================= -->
+<!-- SIDEBAR -->
+<!-- ================================= -->
+
+<aside class="sidebar">
+
+    <h2>
+        Laptop Inspector
+    </h2>
+
+    <nav>
+
+        <a href="history.html">
+
+            History
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ================================= -->
+<!-- MAIN CONTENT -->
+<!-- ================================= -->
+
+<main class="main-content">
+
+    <!-- ================================= -->
+    <!-- TOPBAR -->
+    <!-- ================================= -->
+
+    <header class="topbar">
+
+        <h1>
+            Inspection Compare
+        </h1>
+
+    </header>
+
+    <!-- ================================= -->
+    <!-- CONTENT -->
+    <!-- ================================= -->
+
+    <section class="content">
+
+        <!-- ================================= -->
+        <!-- HEADER -->
+        <!-- ================================= -->
+
+        <div class="compare-header">
+
+            <h2 id="serialTitle">
+
+                Comparison Result
+
+            </h2>
+
+            <p class="compare-subtitle">
+
+                Perbandingan kondisi perangkat berdasarkan inspection lifecycle.
+
+            </p>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- INFO CARDS -->
+        <!-- ================================= -->
+
+        <div class="compare-info">
+
+            <!-- Borrower -->
+
+            <div class="info-card">
+
+                <div class="info-label">
+
+                    Borrower
+
+                </div>
+
+                <div
+                        class="info-value"
+                        id="borrowerText">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <!-- Before Inspector -->
+
+            <div class="info-card">
+
+                <div class="info-label">
+
+                    Before Inspector
+
+                </div>
+
+                <div
+                        class="info-value"
+                        id="beforeInspectorText">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <!-- After Inspector -->
+
+            <div class="info-card">
+
+                <div class="info-label">
+
+                    After Inspector
+
+                </div>
+
+                <div
+                        class="info-value"
+                        id="afterInspectorText">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <!-- Before Scan -->
+
+            <div class="info-card">
+
+                <div class="info-label">
+
+                    Before Scan
+
+                </div>
+
+                <div
+                        class="info-value"
+                        id="beforeTimeText">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <!-- After Scan -->
+
+            <div class="info-card">
+
+                <div class="info-label">
+
+                    After Scan
+
+                </div>
+
+                <div
+                        class="info-value"
+                        id="afterTimeText">
+
+                    -
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- COMPARE TABLE -->
+        <!-- ================================= -->
+
+        <table class="compare-table">
+
+            <thead>
+
+            <tr>
+
+                <th>
+                    Component
+                </th>
+
+                <th>
+                    Before
+                </th>
+
+                <th>
+                    After
+                </th>
+
+                <th>
+                    Status
+                </th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="compareBody">
+
+            </tbody>
+
+        </table>
+
+        <!-- ================================= -->
+        <!-- SUMMARY -->
+        <!-- ================================= -->
+
+        <div class="summary-card">
+
+            <h3>
+
+                Ringkasan Perubahan
+
+            </h3>
+
+            <div
+                    id="summaryText"
+                    class="summary-content">
+
+                Belum ada data.
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- RECOMMENDATION -->
+        <!-- ================================= -->
+
+        <div class="summary-card">
+
+            <h3>
+
+                Rekomendasi Pemeliharaan
+
+            </h3>
+
+            <ul
+                    id="recommendationList">
+
+                <li
+                        class="summary-good">
+
+                    Menunggu hasil analisis.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- ACTION -->
+        <!-- ================================= -->
+
+        <div class="compare-actions">
+
+            <button
+                    id="btnExport"
+                    class="btn-primary">
+
+                Export Dokumen Serah Terima
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<!-- ================================= -->
+
+<!-- SCRIPT -->
+
+<!-- ================================= -->
+
+<script src="js/compare.js?v=13"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Maven
+target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java
+*.class
+*.jar
+
+# Build Output
+final-output/
+generated-reports/
+
+# Maven Shade
+dependency-reduced-pom.xml
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# Environment
+.env

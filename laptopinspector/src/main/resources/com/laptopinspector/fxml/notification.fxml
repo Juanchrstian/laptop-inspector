@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.laptopinspector.controller.NotificationController"
+      styleClass="root-pane"
+      alignment="CENTER"
+      spacing="0"
+      prefWidth="860" prefHeight="580">
+
+    <!-- Top Bar -->
+    <HBox styleClass="top-bar" alignment="CENTER_RIGHT" prefHeight="48">
+        <Button fx:id="btnToggleTheme" text="☀ Light Mode"
+                styleClass="btn-toggle" onAction="#onToggleTheme"/>
+    </HBox>
+
+    <!-- Center -->
+    <VBox alignment="CENTER" spacing="20" VBox.vgrow="ALWAYS" style="-fx-padding: 0 0 48 0;">
+
+        <!-- Success Icon -->
+        <VBox fx:id="iconSuccess" alignment="CENTER"
+              style="-fx-background-color: -app-success-bg; -fx-background-radius: 50; -fx-pref-width: 96; -fx-pref-height: 96;"
+              visible="true">
+            <Label text="✓" styleClass="notif-icon-success"/>
+        </VBox>
+
+        <!-- Failed Icon -->
+        <VBox fx:id="iconFailed" alignment="CENTER"
+              style="-fx-background-color: -app-danger-bg; -fx-background-radius: 50; -fx-pref-width: 96; -fx-pref-height: 96;"
+              visible="false">
+            <Label text="✕" styleClass="notif-icon-failed"/>
+        </VBox>
+
+        <!-- Status -->
+        <Label fx:id="lblStatus" text="Data Tersimpan" styleClass="notif-title-success"/>
+
+        <!-- Message -->
+        <Label fx:id="lblMessage"
+               text="Data inspeksi berhasil dikirim ke server."
+               styleClass="notif-message"
+               wrapText="true" textAlignment="CENTER"
+               maxWidth="460"/>
+
+        <!-- Card info -->
+        <VBox styleClass="card" maxWidth="360" style="-fx-padding: 14 20;">
+            <Label text="Apa selanjutnya?" styleClass="section-title" style="-fx-padding: 0 0 8 0;"/>
+            <Label text="Buka web dashboard untuk melihat data dan perbandingan BEFORE vs AFTER."
+                   styleClass="card-desc" wrapText="true"/>
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox spacing="12" alignment="CENTER">
+            <Button text="Inspeksi Baru" styleClass="btn-primary"
+                    onAction="#onNewInspectionClicked"
+                    prefWidth="180" prefHeight="42"/>
+            <Button text="Kembali ke Menu" styleClass="btn-ghost"
+                    onAction="#onBackToMenuClicked"
+                    prefWidth="180" prefHeight="42"/>
+        </HBox>
+
+    </VBox>
+
+</VBox>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.laptopinspector.controller.DetailController"
+           prefWidth="860"
+           prefHeight="620">
+
+    <!-- ===================================== -->
+    <!-- MAIN -->
+    <!-- ===================================== -->
+
+    <HBox styleClass="root-pane">
+
+        <!-- ================================= -->
+        <!-- SIDEBAR -->
+        <!-- ================================= -->
+
+        <VBox styleClass="sidebar"
+              prefWidth="200"
+              spacing="0">
+
+            <VBox styleClass="logo-box"
+                  spacing="3">
+
+                <Label text="Laptop Inspector"
+                       styleClass="logo-title"/>
+
+                <Label text="v1.0.0"
+                       styleClass="logo-sub"/>
+
+            </VBox>
+
+            <Button text="  Dashboard"
+                    styleClass="nav-item"
+                    prefWidth="200"
+                    prefHeight="42"/>
+
+            <Button text="  Inspeksi Baru"
+                    styleClass="nav-item active"
+                    prefWidth="200"
+                    prefHeight="42"/>
+
+            <Button text="  Riwayat"
+                    styleClass="nav-item"
+                    prefWidth="200"
+                    prefHeight="42"/>
+
+        </VBox>
+
+        <!-- ================================= -->
+        <!-- CONTENT -->
+        <!-- ================================= -->
+
+        <VBox HBox.hgrow="ALWAYS"
+              spacing="0">
+
+            <!-- HEADER -->
+
+            <HBox styleClass="header-strip"
+                   alignment="CENTER_LEFT"
+                   spacing="10"
+                   prefHeight="52">
+
+                <Label text="Hasil Scan —"
+                       styleClass="page-subtitle"/>
+
+                <Label fx:id="lblCheckType"
+                       text="BEFORE"
+                       styleClass="badge-before"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="btnToggleTheme"
+                        text="☀ Light Mode"
+                        styleClass="btn-toggle"
+                        onAction="#onToggleTheme"/>
+
+            </HBox>
+
+            <!-- SCROLL -->
+
+            <ScrollPane fitToWidth="true"
+                        styleClass="scroll-pane"
+                        VBox.vgrow="ALWAYS">
+
+                <VBox style="-fx-padding: 20;"
+                      spacing="14">
+
+                    <!-- PAGE TITLE -->
+
+                    <VBox spacing="3">
+
+                        <Label text="Detail Perangkat"
+                               styleClass="page-title"/>
+
+                        <Label text="Informasi hardware yang terdeteksi dari sistem"
+                               styleClass="page-subtitle"/>
+
+                    </VBox>
+
+                    <!-- ========================= -->
+                    <!-- DEVICE INFO -->
+                    <!-- ========================= -->
+
+                    <VBox styleClass="card"
+                          spacing="0">
+
+                        <Label text="INFORMASI PERANGKAT"
+                               styleClass="section-title"
+                               style="-fx-padding: 0 0 10 0;"/>
+
+                        <GridPane hgap="16"
+                                  vgap="0"
+                                  prefWidth="9999">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="38"/>
+
+                                <ColumnConstraints percentWidth="62"/>
+
+                            </columnConstraints>
+
+                            <Label text="Serial Number"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblSerialNumber"
+                                   text="—"
+                                   styleClass="data-value-accent"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="1"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Model"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblSystemModel"
+                                   text="—"
+                                   styleClass="data-value"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Username"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblUsername"
+                                   text="—"
+                                   styleClass="data-value"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="5"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Sistem Operasi"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="6"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblOs"
+                                   text="—"
+                                   styleClass="data-value"
+                                   wrapText="true"
+                                   GridPane.rowIndex="6"
+                                   GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+                    <!-- ========================= -->
+                    <!-- HARDWARE -->
+                    <!-- ========================= -->
+
+                    <VBox styleClass="card"
+                          spacing="0">
+
+                        <Label text="HARDWARE"
+                               styleClass="section-title"
+                               style="-fx-padding: 0 0 10 0;"/>
+
+                        <GridPane hgap="16"
+                                  vgap="0"
+                                  prefWidth="9999">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="38"/>
+
+                                <ColumnConstraints percentWidth="62"/>
+
+                            </columnConstraints>
+
+                            <Label text="CPU"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblCpu"
+                                   text="—"
+                                   wrapText="true"
+                                   styleClass="data-value"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="1"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="GPU"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblGpu"
+                                   text="—"
+                                   wrapText="true"
+                                   styleClass="data-value"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Total RAM"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblRam"
+                                   text="—"
+                                   styleClass="data-value-accent"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+                    <!-- ========================= -->
+                    <!-- STORAGE -->
+                    <!-- ========================= -->
+
+                    <VBox styleClass="card"
+                          spacing="0">
+
+                        <Label text="STORAGE &amp; BATTERY"
+                               styleClass="section-title"
+                               style="-fx-padding: 0 0 10 0;"/>
+
+                        <GridPane hgap="16"
+                                  vgap="0"
+                                  prefWidth="9999">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="38"/>
+
+                                <ColumnConstraints percentWidth="62"/>
+
+                            </columnConstraints>
+
+                            <Label text="Total Storage"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblTotalStorage"
+                                   text="—"
+                                   styleClass="data-value"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="1"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Storage Tersedia"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblAvailableStorage"
+                                   text="—"
+                                   styleClass="data-value-success"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                            <Region styleClass="data-separator"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="0"
+                                    GridPane.columnSpan="2"/>
+
+                            <Label text="Battery Health"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblBattery"
+                                   text="—"
+                                   styleClass="data-value-accent"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+                    <!-- ========================= -->
+                    <!-- TIMESTAMP -->
+                    <!-- ========================= -->
+
+                    <VBox styleClass="card"
+                          spacing="0">
+
+                        <Label text="TIMESTAMP"
+                               styleClass="section-title"
+                               style="-fx-padding: 0 0 10 0;"/>
+
+                        <GridPane hgap="16"
+                                  vgap="0"
+                                  prefWidth="9999">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="38"/>
+
+                                <ColumnConstraints percentWidth="62"/>
+
+                            </columnConstraints>
+
+                            <Label text="Scan Started"
+                                   styleClass="data-label"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="lblScanStarted"
+                                   text="—"
+                                   styleClass="data-value-accent"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+                </VBox>
+
+            </ScrollPane>
+
+            <!-- FOOTER -->
+
+            <HBox styleClass="footer-strip"
+                   alignment="CENTER_RIGHT"
+                   spacing="10"
+                   prefHeight="60">
+
+                <Button text="← Kembali"
+                        styleClass="btn-ghost"
+                        onAction="#onBackClicked"
+                        prefHeight="38"/>
+
+                <Button fx:id="btnSubmit"
+                        text="Submit Data →"
+                        styleClass="btn-primary"
+                        onAction="#onSubmitClicked"
+                        prefWidth="160"
+                        prefHeight="38"/>
+
+            </HBox>
+
+        </VBox>
+
+    </HBox>
+
+    <!-- ===================================== -->
+    <!-- LOADING OVERLAY -->
+    <!-- ===================================== -->
+
+    <VBox fx:id="loadingOverlay"
+          styleClass="loading-overlay"
+          alignment="CENTER"
+          spacing="14"
+          visible="false">
+
+        <ProgressIndicator styleClass="spinner"
+                           prefWidth="48"
+                           prefHeight="48"/>
+
+        <Label text="Memindai hardware..."
+               styleClass="loading-label"/>
+
+    </VBox>
+
+</StackPane>

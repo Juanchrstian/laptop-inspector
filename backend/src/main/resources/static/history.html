@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Inspection History
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>
+            Laptop Inspector
+        </h2>
+
+        <nav>
+
+            <a href="history.html"
+               class="active">
+
+                History
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <h1>
+                Inspection History
+            </h1>
+
+        </header>
+
+        <!-- CONTENT -->
+
+        <section class="content">
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input type="text"
+                       id="searchInput"
+                       placeholder="Search serial number...">
+
+            </div>
+
+            <!-- TABLE -->
+
+            <table class="history-table">
+
+                <thead>
+
+                <tr>
+
+                    <th>Serial Number</th>
+
+                    <th>Borrower</th>
+
+                    <th>Before</th>
+
+                    <th>After</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="historyBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/history.js"></script>
+
+</body>
+
+</html>

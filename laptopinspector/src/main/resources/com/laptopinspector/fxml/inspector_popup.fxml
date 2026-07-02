@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.laptopinspector.controller.InspectorPopupController"
+      styleClass="root-pane"
+      alignment="CENTER"
+      spacing="0"
+      prefWidth="420"
+      prefHeight="300">
+
+    <VBox
+            style="-fx-padding: 28 32;"
+            spacing="20"
+            alignment="CENTER">
+
+        <!-- ================================= -->
+        <!-- HEADER -->
+        <!-- ================================= -->
+
+        <VBox
+                spacing="5"
+                alignment="CENTER">
+
+            <Label
+                    text="Formulir Peminjaman Laptop"
+                    styleClass="popup-title"/>
+
+        </VBox>
+
+        <!-- ================================= -->
+        <!-- DIVIDER -->
+        <!-- ================================= -->
+
+        <Region
+                style="-fx-background-color: -app-border; -fx-pref-height: 1;"
+                prefWidth="356"/>
+
+        <!-- ================================= -->
+        <!-- FORM -->
+        <!-- ================================= -->
+
+        <VBox spacing="12">
+
+            <!-- PETUGAS IT -->
+
+            <Label
+                    text="Petugas IT"/>
+
+            <ComboBox
+                    fx:id="cmbInspector"
+                    promptText="Pilih Petugas IT"
+                    prefWidth="356"/>
+
+            <!-- KARYAWAN -->
+
+            <Label
+                    text="Peminjam"/>
+
+            <ComboBox
+                    fx:id="cmbBorrower"
+                    promptText="Pilih Karyawan"
+                    prefWidth="356"/>
+
+        </VBox>
+
+        <!-- ================================= -->
+        <!-- BUTTON -->
+        <!-- ================================= -->
+
+        <HBox
+                spacing="10"
+                alignment="CENTER"
+                prefWidth="356">
+
+            <Button
+                    fx:id="btnCancel"
+                    text="Batal"
+                    styleClass="btn-ghost"
+                    onAction="#onCancelClicked"
+                    prefWidth="160"
+                    prefHeight="40"
+                    HBox.hgrow="ALWAYS"/>
+
+            <Button
+                    fx:id="btnConfirm"
+                    text="Kirim Data"
+                    styleClass="btn-primary"
+                    onAction="#onConfirmClicked"
+                    prefWidth="180"
+                    prefHeight="40"
+                    HBox.hgrow="ALWAYS"/>
+
+        </HBox>
+
+        <!-- ================================= -->
+        <!-- LOADING -->
+        <!-- ================================= -->
+
+        <ProgressIndicator
+                fx:id="loadingIndicator"
+                prefWidth="28"
+                prefHeight="28"
+                visible="false"
+                styleClass="spinner"/>
+
+    </VBox>
+
+</VBox>

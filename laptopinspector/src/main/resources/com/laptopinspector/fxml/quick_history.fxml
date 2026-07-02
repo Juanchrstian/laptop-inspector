@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.laptopinspector.controller.QuickHistoryController"
+            styleClass="root-pane history-root">
+
+    <top>
+
+        <HBox spacing="10"
+              alignment="CENTER_LEFT"
+              style="-fx-padding: 15;">
+
+            <Button text="Back"
+                    onAction="#onBackClicked"/>
+
+            <Label text="Recent Scans"
+                   style="-fx-font-size: 20px;
+                          -fx-font-weight: bold;"/>
+
+        </HBox>
+
+    </top>
+
+    <center>
+    <VBox style="-fx-padding: 20;">
+        <TableView fx:id="tableHistory"
+           styleClass="history-table">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="60"/>
+
+                <TableColumn fx:id="colSerial"
+                             text="Serial Number"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colModel"
+                             text="Model"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colType"
+                             text="Type"
+                             prefWidth="100"/>
+
+                <TableColumn fx:id="colInspector"
+                             text="Inspector"
+                             prefWidth="140"/>
+
+            </columns>
+
+        </TableView>
+    </VBox>
+    </center>
+
+</BorderPane>

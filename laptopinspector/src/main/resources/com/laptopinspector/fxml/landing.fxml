@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.laptopinspector.controller.LandingController"
+           styleClass="root-pane"
+           prefWidth="860" prefHeight="580">
+
+    <VBox spacing="0">
+        <!-- Top Bar -->
+        <HBox styleClass="top-bar" alignment="CENTER_RIGHT" prefHeight="48">
+            <Button fx:id="btnToggleTheme" text="☀ Light Mode"
+                    styleClass="btn-toggle" onAction="#onToggleTheme"/>
+        </HBox>
+
+        <!-- Center Content -->
+        <VBox alignment="CENTER" spacing="20" VBox.vgrow="ALWAYS" style="-fx-padding: 0 0 40 0;">
+
+            <!-- Icon placeholder -->
+            <VBox alignment="CENTER"
+                  style="-fx-background-color: -app-accent-bg; -fx-background-radius: 20; -fx-padding: 20; -fx-pref-width: 80; -fx-pref-height: 80;">
+                <Label text="⬡" style="-fx-text-fill: -app-accent; -fx-font-size: 32px;"/>
+            </VBox>
+
+            <!-- Title -->
+            <VBox alignment="CENTER" spacing="4">
+                <Label text="Laptop" styleClass="landing-title"/>
+                <Label text="Inspector" styleClass="landing-accent"/>
+            </VBox>
+
+            <!-- Subtitle -->
+            <Label text="Hardware diagnostic &amp; condition monitoring system"
+                   styleClass="landing-sub"/>
+
+            <!-- Spacer -->
+            <Region prefHeight="12"/>
+
+            <!-- CTA Button -->
+            <Button fx:id="btnStart" text="Mulai Inspeksi"
+                    styleClass="btn-primary" onAction="#onStartClicked"
+                    prefWidth="200" prefHeight="44"/>
+
+            <!-- Version -->
+            <Label text="v1.0.0 — Powered by OSHI" styleClass="version-text"/>
+        </VBox>
+    </VBox>
+
+</StackPane>
