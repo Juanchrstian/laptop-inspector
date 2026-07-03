@@ -133,7 +133,7 @@ laptop-inspector
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/laptop-inspector.git
+git clone https://github.com/Juanchrstian/laptop-inspector.git
 ```
 
 ---
